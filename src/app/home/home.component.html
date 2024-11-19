@@ -1,0 +1,21 @@
+<ul>
+  <li *ngFor="let food of foods">
+    <a>
+      <img [src]="food.imageurl" alt="food images" />
+      <div class="content">
+        <div class="name" style="color: black; font-size: 16px;">
+          {{ food.name }}
+        </div>
+        <span class="favorite {{food.favorite?'':'not'}}">
+          ❤
+        </span>
+        <div class="stars">
+  
+          <star-rating [stars]="food.stars" />
+        </div>
+        
+
+      </div>
+    </a>
+  </li>
+</ul>
